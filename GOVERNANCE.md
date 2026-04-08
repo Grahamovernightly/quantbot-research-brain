@@ -42,3 +42,7 @@ intelligence/    — Batch-level insights from backtest runs
 | 2026-04-07 | Three EA families defined | Different market regimes and account types need different parameter profiles | Hermes |
 | 2026-04-07 | BLUEPRINT_AGGRESSIVE gate profile created | Standard gates reject best performers due to grid EA trade frequency characteristics | Hermes+Claude |
 | 2026-04-07 | min_per_month lowered to 0.5 | Basket-close grids trade ~1 sequence/6-8 weeks; standard threshold calibrated for signal EAs | Hermes |
+| 2026-04-08 | Blueprint USDCAD #3586/#5303 promoted to FT | First Blueprint candidates with clean L2 data (100k base, dd~6%). PF=43/42, promotable=True | Hermes |
+| 2026-04-08 | EURJPY/GBPJPY Blueprint excluded from challenge | 20-27% intraday DD at 100k incompatible with 4.8% kill switch. Need LotSize=0.10 set files for challenge context | Hermes |
+| 2026-04-08 | Challenge sim norm bug fixed | NEVER normalise L2 pct to 100k base — use raw CSV base pct × multiplier for income calcs | Hermes |
+| 2026-04-08 | Blueprint ex5 compiled for MT5 build 5660 | Branch claude/build-mt5-ea-tWkwE fixes BasketState pointer syntax, STAT_DURATION enums, SYMBOL_FILLING_FLAGS | Hermes+Claude |

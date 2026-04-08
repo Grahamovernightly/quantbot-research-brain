@@ -69,3 +69,23 @@ EURJPY PF=53.91 and PF=53.76 are exceptional. Priority to understand their param
 For each Tier 1/2 candidate: extract PipStep, LockProfit, TrailingStoploss, 
 DelayTradeSequence, MaxOrders from their backtest set files.
 These become the seed for neighbourhood exploitation in Phase 3.
+
+---
+
+## Blueprint EA — Forward Test Candidates (2026-04-08)
+
+### #3586 — USDCAD | PF=43.47 | 14 trades | Blueprint_EA ea_id=16
+- **State:** risk_approved → promoting to forward_test
+- **Params:** PipStep=24, LockProfit=25, TrailingStoploss=7, DelayTradeSequence=7, AtrPeriod=1000
+- **L2 data:** 299 days, worst_dd=6.25%, $73/day, base=$100k
+- **Challenge sim:** Safe at ×0.5 multiplier (98.2% combined pass)
+
+### #5303 — USDCAD | PF=42.64 | 16 trades | Blueprint_EA ea_id=16
+- **State:** risk_approved → promoting to forward_test
+- **Params:** PipStep=24, LockProfit=20, TrailingStoploss=1, DelayTradeSequence=7, AtrPeriod=1000
+- **L2 data:** 299 days, worst_dd=6.11%, $73/day, base=$100k
+- **Challenge sim:** Safe at ×0.5 multiplier (98.0% combined pass)
+
+**Note:** EURJPY/GBPJPY/NZDUSD Blueprint candidates are challenge-incompatible at 100k
+due to 20-27% intraday DD. Need LotSize=0.10 set files for challenge context.
+USDCAD is structurally low-volatility — the grid stays controlled.
