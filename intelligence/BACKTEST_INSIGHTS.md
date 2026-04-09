@@ -76,5 +76,19 @@ Regime-intelligent items now in queue — expect improvement in next batch.
 3. Prepare C26282 CADCHF for forward test as the cleaner CADCHF family probe
 4. Continue intelligent neighbourhood search around CADCHF rather than broad random sweeps
 
+### Deployment update (completed 2026-04-09)
+- C26295 GBPUSD deployed to ForexVPS Terminal 1
+  - magic=886003
+  - chr=chart_C26295_GBPUSD.chr
+  - Experts log confirms Blueprint_EA loaded on GBPUSD M1 with expected params
+- C26282 CADCHF deployed to ForexVPS Terminal 1
+  - magic=886004
+  - chr=chart_C26282_CADCHF.chr
+  - Experts log confirms Blueprint_EA loaded on CADCHF M1 with expected params
+- order.wnd count after deployment: 59/64 (no eviction needed)
+- Copier remained healthy after Terminal 1 restart (`master_connected=true`, `slaves_active=6`)
+- MT5Suite deployment bug observed: after promote→forward_test, API auto-set `deployment_status=failed` with `invalid literal for int() with base 10: 'SMC_888001'`. Workaround used successfully: reset to `pending`, set `deploying` with intended magic/chr, then mark `deployed` after Experts-log verification.
+- Existing ForexVPS profile already contains BOTH Blueprint USDCAD charts C3586 and C5303 (correlation concern still valid for challenge stacks even though both are currently deployed for FT observation)
+
 ---
-*Next entry: after further CADCHF/GBPUSD neighbourhood exploitation and FT verification*
+*Next entry: after first live-trade verification for C26295/C26282 and further CADCHF/GBPUSD neighbourhood exploitation*
