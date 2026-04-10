@@ -12,7 +12,7 @@ Some candidates were rejected because the old governance stack penalised exactly
 
 The objective is to mine the rejected pool systematically rather than by luck.
 
-## Two-Lane Agenda
+## Three-Lane Agenda
 
 ### Lane A — Challenge Fast
 Goal: pass challenges quickly.
@@ -22,6 +22,7 @@ Bias toward:
 - acceptable kill-switch-bounded risk
 - symbols/families already proven live or near-live
 - tolerate higher DD if kill-switch math still works
+- enough trade frequency to actually move a challenge within a realistic time window
 
 Examples:
 - Magic 777 / 7771 / 7772 / 7773 family
@@ -40,6 +41,19 @@ Bias toward:
 Examples:
 - CADCHF family
 - AUDNZD / AUDCAD / EURCHF structural families
+
+### Lane C — Stack Boosters
+Goal: add high-quality PnL bursts to a diversified stack without requiring high standalone trade frequency.
+
+Bias toward:
+- very strong PF / payoff quality
+- lower or moderate trade frequency
+- candidates that may be too slow to be true challenge-fast leaders on their own
+- useful as diversifying boosters inside a broader stack when they do fire
+
+Examples:
+- ultra-high-PF low-trade candidates like C3112 GBPUSD
+- rare but high-quality rejected outliers that look too good to discard
 - safer Blueprint translations of proven Banker logic
 
 ## Core principle

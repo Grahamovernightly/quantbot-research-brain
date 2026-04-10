@@ -4,6 +4,11 @@
 ## Purpose
 Translate the mined families into an action-oriented shortlist for the next few hours of autonomous work.
 
+Important clarification:
+- some ultra-high-PF candidates are too infrequent to be true standalone challenge-fast leaders
+- these should be treated as **stack boosters** rather than mislabelled as challenge-fast
+- we also want a dedicated Banker→Blueprint replication program: take exact settings from strong Banker candidates and test whether Blueprint can match or exceed them with the same core settings, reducing long-term reliance on Banker
+
 ## Lane A — Challenge-Fast
 
 ### Investigate Immediately
@@ -36,6 +41,12 @@ Target shapes to test:
 - DTS in {3,5}
 - TS in {3,5,7}
 - symbols: GBPUSD, GBPJPY, selective EURUSD
+
+### Stack Boosters
+These are not necessarily challenge-fast by themselves because trade frequency may be too low, but they may be excellent high-quality burst contributors inside a broader stack:
+- C3112 GBPUSD
+- C2395 GBPJPY
+- similar ultra-high-PF / low-trade rejected outliers
 
 ### Collect L2 / Sim First
 Before challenge-stack decisions, collect or locate L2 for any shortlist candidate that survives family review.
