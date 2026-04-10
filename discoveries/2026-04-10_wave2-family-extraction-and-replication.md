@@ -89,14 +89,28 @@ The following exact-setting Blueprint replications were queued:
 - wi#68809 AUDNZD from C19713 params
 - wi#68810 AUDCAD from C21802 params
 
-Current status at creation check:
-- 68804 leased
-- 68805 leased
-- 68806 leased
-- 68807 leased
-- 68808 leased
-- 68809 queued
-- 68810 queued
+Observed outcome:
+- 68805, 68806, 68807, 68808, 68809, 68810 all completed as `empty_backtest` / 0 trades
+- 68804 GBPUSD blocked after repeated timeouts across multiple workers
+
+Interpretation:
+- exact Banker → Blueprint copying is NOT sufficient by itself
+- the edge family may be real, but Blueprint needs translated settings rather than naive 1:1 replication
+- this is still useful intelligence because it tells us where Blueprint diverges from Banker
+
+## Second-wave Blueprint-friendly translations queued
+To test whether the same family can survive a more Blueprint-native translation, the following second-wave jobs were queued:
+- wi#68961 GBPUSD from C14533 translated shape
+- wi#68962 GBPJPY from C5110 translated shape
+- wi#68963 EURUSD from C1270 translated shape
+- wi#68964 AUDNZD from C19793 translated shape
+- wi#68965 AUDNZD from C19792 translated shape
+- wi#68966 AUDCAD from C21802 translated shape
+
+Second-wave translation principles:
+- relax extreme DTS where needed
+- avoid over-exact copying when Blueprint likely interprets basket mechanics differently
+- keep the family identity, not necessarily every literal setting
 
 ## Priority conclusions
 
